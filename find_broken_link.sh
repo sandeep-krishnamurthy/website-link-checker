@@ -3,7 +3,7 @@ set -e
 
 sudo apt-get update
 sudo apt-get install -y npm
-sudo apt-get install -y nodejs-legacy
+sudo apt-get install -y nodejs
 sudo npm install broken-link-checker -g
 
 # replace this with your site url.
