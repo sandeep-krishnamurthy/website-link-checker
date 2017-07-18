@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
-sudo apt-get install -y nodejs-legacy
-sudo apt-get install -y npm
+apt-get install -y nodejs-legacy
+apt-get install -y npm
 npm install broken-link-checker -g
 
 # replace this with your site url.
