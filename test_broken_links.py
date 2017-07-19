@@ -66,9 +66,9 @@ print("START - Broken links summary")
 
 if broken_links_count == 0:
     print("No broken links in http://mxnet.io/")
+    print("END - Broken links summary")
     sys.exit(0)
 else:
     print(broken_links_summary)
+    print("END - Broken links summary")
     sys.exit(-1)
-
-print("END - Broken links summary")
