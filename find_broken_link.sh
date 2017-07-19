@@ -14,7 +14,5 @@ sudo apt-get install -y nodejs
 # Install broken link checker utility
 sudo npm install broken-link-checker -g
 
-# replace this with your site url.
-# r -> recursive
-# o -> ordered
-blc http://mxnet.io -ro
+# Test broken link and print summary.
+python test_broken_links.py
