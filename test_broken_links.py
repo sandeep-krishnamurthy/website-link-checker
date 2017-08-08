@@ -43,7 +43,7 @@ def prepare_link_test_result(command_output):
 
 # Command to check broken links
 # Reference - https://www.npmjs.com/package/broken-link-checker
-cmd = "blc http://mxnet.io/ -ro"
+cmd = "blc https://mxnet.incubator.apache.org -ro"
 broken_links_count = 0
 broken_links_summary = ""
 
@@ -65,7 +65,7 @@ print("END - Broken links count")
 print("START - Broken links summary")
 
 if broken_links_count == 0:
-    print("No broken links in http://mxnet.io/")
+    print("No broken links in https://mxnet.incubator.apache.org")
     print("END - Broken links summary")
     sys.exit(0)
 else:
