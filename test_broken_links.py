@@ -9,9 +9,12 @@ def prepare_link_test_result(command_output):
     NEW_PAGE_TEST_START_REGEX = "Getting links from:"
     BROKEN_PAGE_START_REGEX = "BROKEN"
     PAGE_TEST_END_REGEX = "Finished! "
+    
+    # Whitelisted broken links patterns
     HTTP_401_REGEX = "(HTTP_401)"
     BLC_UNKNOWN_REGEX = "(BLC_UNKNOWN)"
     HTTP_UNDEFINED = "HTTP_undefined"
+    FALSE_SCALA_API_DOC_LINK = "java$lang.html"
 
     # Initialize flags with happy case
     current_page = ""
@@ -30,7 +33,7 @@ def prepare_link_test_result(command_output):
 
         if line.find(BROKEN_PAGE_START_REGEX) != -1:
             # Skip (401)
-            if HTTP_401_REGEX not in line and BLC_UNKNOWN_REGEX not in line and HTTP_UNDEFINED not in line:
+            if HTTP_401_REGEX not in line and BLC_UNKNOWN_REGEX not in line and HTTP_UNDEFINED not in line and FALSE_SCALA_API_DOC_LINK not in line:
                 current_page_broken = True
                 current_page_broken_links += line.split(BROKEN_PAGE_START_REGEX)[1] + "\n"
 
