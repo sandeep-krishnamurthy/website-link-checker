@@ -15,7 +15,7 @@ def prepare_link_test_result(command_output):
     BLC_UNKNOWN_REGEX = "(BLC_UNKNOWN)"
     HTTP_UNDEFINED = "HTTP_undefined"
     FALSE_SCALA_API_DOC_LINK = "java$lang.html"
-    FALSE_SCALA_API_DEPRECATED_LINK = "https://mxnet.incubator.apache.org/api/scala/docs/deprecated-list.html"
+    FALSE_SCALA_API_DEPRECATED_LINK = "api/scala/docs/deprecated-list.html"
     FALSE_PAPER_LINK = "https://static.googleusercontent.com/media/research.google.com/en/pubs/archive/45488.pdf"
 
     # Initialize flags with happy case
